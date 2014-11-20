@@ -1,0 +1,28 @@
+#Configuracion mas basica para el cache
+
+jcs.region.CandidateInformation=DC
+jcs.region.CandidateInformation.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.CandidateInformation.cacheattributes.MaxObjects=1000
+jcs.region.CandidateInformation.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+
+ 
+
+#Seccion donde se agrega el "memory shrinker" o reductor de memoria.
+
+jcs.region.CandidateInformation.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.region.CandidateInformation.cacheattributes.MaxSpoolPerRun=500
+jcs.region.CandidateInformation.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.region.CandidateInformation.elementattributes.IsEternal=false
+jcs.region.CandidateInformation.cacheattributes.UseMemoryShrinker=true
+jcs.region.CandidateInformation.cacheattributes.MaxMemoryIdleTimeSeconds=3600
+
+jcs.region.CandidateInformation=DC
+jcs.region.CandidateInformation.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.CandidateInformation.cacheattributes.MaxObjects=1000
+jcs.region.CandidateInformation.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.CandidateInformation.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.region.CandidateInformation.cacheattributes.MaxSpoolPerRun=500
+jcs.region.CandidateInformation.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.region.CandidateInformation.elementattributes.IsEternal=false
+jcs.region.CandidateInformation.cacheattributes.UseMemoryShrinker=false
+jcs.region.CandidateInformation.cacheattributes.MaxMemoryIdleTimeSeconds=3600
