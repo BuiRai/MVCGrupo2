@@ -6,11 +6,13 @@
 
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author David Cocom
  */
-public class Candidato {
+public class Candidato implements Serializable {
 
     private String nombre;
     private int numVotos;
