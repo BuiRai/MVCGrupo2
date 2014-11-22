@@ -6,20 +6,22 @@
 
 package Modelo;
 
+import ArquiSoftware.Cacheable;
 import java.io.Serializable;
 
 /**
  *
  * @author David Cocom
  */
-public class Candidato implements Serializable {
+public class Candidato implements Serializable , Cacheable{
 
     private String nombre;
     private int numVotos;
-
+    private int id;
 
     public Candidato(String nombre) {
         this.nombre = nombre;
+        id = AsignadorDeId.getInstance().generarId();
         this.numVotos = 0;
     }
 
@@ -35,9 +37,18 @@ public class Candidato implements Serializable {
     public int getNumVotos() {
         return numVotos;
     }
-
+    
     public void agregarVoto() {
         ++numVotos;
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id){
+        this.id = id;
     }
 
 }

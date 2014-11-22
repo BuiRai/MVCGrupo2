@@ -36,7 +36,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void rellenarCBoxCandidatos(ArrayList<Candidato> candidatos) {
         DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
         for (Candidato cand : candidatos) {
-            modeloCombo.addElement(cand.getNombre());
+            modeloCombo.addElement(cand.getId());
         }
         comboCandidatos.setModel(modeloCombo);
 
@@ -62,8 +62,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        comboCandidatos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnVotar.setText("Votar");
         btnVotar.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +148,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVotarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVotarActionPerformed
-        ev.realizarVotacion((String) comboCandidatos.getSelectedItem());
+        int idCandidato = (int) comboCandidatos.getSelectedItem();
+        ev.realizarVotacion(idCandidato);
     }//GEN-LAST:event_btnVotarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed

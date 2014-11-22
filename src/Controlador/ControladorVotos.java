@@ -25,8 +25,8 @@ public class ControladorVotos extends Controlador{
     }
 
 
-    public void realizarVotacion(String candidato) {
-        ((AdminVotos)super.getModelo()).agregarVoto(candidato);
+    public void realizarVotacion(int id) {
+        ((AdminVotos)super.getModelo()).agregarVoto(id);
     }
     
     public void desplegarVentana(){
